@@ -1,0 +1,53 @@
+// Kiểm tra chẵn lẻ
+document.querySelector("#kiemTraChanLe").onclick = function () {
+  let number = document.querySelector("#number").value * 1;
+  let result = document.querySelector("#result1");
+  if (number % 2 === 0) {
+    result.innerHTML = "Đây là số chẵn";
+  } else {
+    result.innerHTML = "Đây là số lẻ";
+  }
+};
+// Kiểm tra thưởng
+document.querySelector("#kiemTraThuong").onclick = function () {
+  let number = document.querySelector("#doanhSo").value * 1;
+  let result = document.querySelector("#result2");
+  let bonus = 100;
+  if (number >= bonus) {
+    result.innerHTML = "Đã đạt thưởng 10% tổng doanh số";
+  } else {
+    result.innerHTML = "Không được bonus";
+  }
+};
+// Kiểm tra chiết khấu
+document.querySelector("#kiemTraChietKhau").onclick = function () {
+  let tienMuaHang = document.querySelector("#tienMuaHang").value * 1;
+  let result = document.querySelector("#result3");
+  let rate = 500;
+  if (tienMuaHang >= rate) {
+    let discount = tienMuaHang * 0.2;
+    result.innerHTML = `<p> Khách hàng được giảm 20% trên tổng đơn hàng </p> <p>Chiết khấu là: ${discount}</p>
+<p>Tổng tiền sau chiết khấu: ${tienMuaHang - discount} </p>`;
+  } else {
+    result.innerHTML = `<p>Không được chiết khấu. Tổng tiền : ${tienMuaHang} </p>`;
+  }
+};
+//Ẩn hiện mật khẩu
+let hidePass = document.querySelector("#btnHide");
+hidePass.addEventListener("click", function () {
+  let changeType = document.querySelector("#password");
+  if (changeType.type === "password") {
+    changeType.type = "text";
+  } else {
+    changeType.type = "password";
+  }
+});
+document.querySelector("#kiemTraPass").onclick = function () {
+  let passLength = document.querySelector("#password").value.length;
+  let result = document.querySelector("#result4");
+  if (passLength >= 8) {
+    result.innerHTML = "Mật khẩu mạnh";
+  } else {
+    result.innerHTML = "Mật khẩu chưa đủ mạnh";
+  }
+};

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập JS Buổi 3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+  </head>
+  <body>
+    <div class="container max-w-sm mx-auto mt-10">
+      <form class="max-w-sm mx-auto mt-10">
+        <h1 class="text-3xl text-red-600">Kiểm tra số chẵn lẻ</h1>
+        <div class="mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Nhập vào 1 số thực bất kỳ</label
+          >
+          <input
+            type="number"
+            id="number"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+        </div>
+      </form>
+      <button
+        id="kiemTraChanLe"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Kiểm tra chẵn lẻ
+      </button>
+      <div id="result1" class="mt-2"></div>
+    </div>
+    <div class="container max-w-sm mx-auto mt-10">
+      <form class="max-w-sm mx-auto mt-10">
+        <h1 class="text-3xl text-red-600">Kiểm tra thưởng doanh số</h1>
+        <div class="mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Nhập vào doanh số của nhân viên</label
+          >
+          <input
+            type="text"
+            id="doanhSo"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+        </div>
+      </form>
+      <button
+        id="kiemTraThuong"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Kiểm tra thưởng
+      </button>
+      <div id="result2" class="mt-2"></div>
+    </div>
+    <div class="container max-w-sm mx-auto mt-10">
+      <form class="max-w-sm mx-auto mt-10">
+        <h1 class="text-3xl text-red-600">Kiểm tra chiết khấu</h1>
+        <div class="mb-5">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Nhập vào số tiền mua hàng của khách (USD)</label
+          >
+          <input
+            type="text"
+            id="tienMuaHang"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+        </div>
+      </form>
+      <button
+        id="kiemTraChietKhau"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Kiểm tra chiết khấu
+      </button>
+      <div id="result3" class="mt-2"></div>
+    </div>
+    <div class="container max-w-sm mx-auto mt-10">
+      <form class="max-w-sm mx-auto mt-10">
+        <h1 class="text-3xl text-red-600">Kiểm tra độ mạnh của mật khẩu</h1>
+        <div class="mb-5 relative">
+          <label
+            for="email"
+            class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+            >Nhập mật khẩu</label
+          >
+          <input
+            type="password"
+            id="password"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            required
+          />
+          <div id="btnHide" class="btnHide"><i class="fa fa-eye"></i></div>
+        </div>
+      </form>
+      <button
+        id="kiemTraPass"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Kiểm tra mật khẩu
+      </button>
+      <div id="result4" class="mt-2"></div>
+    </div>
+    <script src="./js/main,js"></script>
+  </body>
+</html>
